@@ -10,7 +10,7 @@ namespace TestApplication
 		static void Main(string[] args)
 		{
 			_logger = LogManager.GetCurrentClassLogger();
-			_logger.Info(1000, "Test");
+			_logger.Info(LogEventId.InformationOnly, "Test");
 
 			MethodThatThrows();
 			Console.WriteLine("Press any key to exit");
@@ -21,11 +21,11 @@ namespace TestApplication
 		{
 			try
 			{
-				throw new Exception("SHIT");
+				throw new Exception("Something bad happened");
 			}
 			catch (Exception ex)
 			{
-				_logger.Error(5000, "Something", ex);
+				_logger.Error(LogEventId.UnhandledException, "Something bad happened", ex);
 			}
 		}
 	}
