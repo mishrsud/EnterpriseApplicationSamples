@@ -73,7 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\App.config" />
+    <None Include="Files\NLog.config" />
+    <None Include="Logging.Impl.nuspec" />
     <None Include="packages.config" />
+    <None Include="Packaging\MakeNuget.cmd" />
+    <None Include="Tools\install.ps1" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
