@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>LoggingApplicationBlock</id>
+		<version>1.0.0.0</version>
+		<title>Logging with an abstracted API</title>
+		<authors>@sudhanshutheone</authors>
+		<owners>Sudhanshu Mishra @sudhanshutheone</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An Abstraction of most common Logging APIs, NLog implementation provided by default</description>
+		<releaseNotes>Initial Release.</releaseNotes>
+		<copyright>Copyright 2015</copyright>
+		<tags>Logging Log</tags>
+		<dependencies>
+			<dependency id="NLog" version="3.2.0.0" />
+		</dependencies>
+		<references>
+			<reference file="Logging.dll" />
+			<reference file="Logging.Impl.dll" />
+		</references>
+	</metadata>
+	<files>
+		<file src="Files\App.config" target="Content" />
+		<file src="Files\NLog.config" target="Content" />
+		<file src="Tools\install.ps1" target="tools" />
+		<file src="bin\debug\Logging.dll" target="lib\net45" />
+		<file src="bin\debug\Logging.Impl.dll" target="lib\net45" />
+	</files>
+</package>
