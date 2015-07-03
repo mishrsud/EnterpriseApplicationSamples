@@ -23,6 +23,40 @@ using (var dbClient = new DatabaseClient(_connectionFunc))
 	var reader = await dbClient.GetDataReaderFromSprocAsync("dbo.GetAllRecords", parmeters);
     // Use the reader to read records
 }
+
+// Map data returned from a stored proc to fill an object
+string connectionsString = @"Data Source=.\SQLEXPRESS12;Initial Catalog=Local;Integrated Security=SSPI;";
+using (var dbClient = new DatabaseClient(() => connectionsString))
+{
+	var parmeters = new SqlParameter[1];		
+	parmeters[0] = new SqlParameter("@pk", 3);
+	var testlist = dbClient
+				.StoredProcedureToList(
+					"dbo.testproc", 
+					parmeters, 
+					MapData());
+	// Get the first item in the list
+	var test = testlist.First();
+}
+
+// A Func delegate that maps data
+private static Func<IDataItem, Test> MapData()
+{
+   return item => new Test() 
+   					{
+   						Id = item.GetField<int>("Id"), 
+						FirstName = item.GetField<string>("FirstName")
+					};
+}
+
+// The test object
+
+public class Test
+{
+	public int Id {get;set;}
+	public string FirstName {get;set;}
+}
+
 ```
 ## API Reference
 
