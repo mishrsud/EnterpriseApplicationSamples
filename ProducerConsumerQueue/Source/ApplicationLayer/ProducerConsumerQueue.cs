@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using NLog;
 
-namespace ApplicationLayer
+namespace Smi.ApplicationLayer
 {
 	/// <summary>
 	/// A simple Producer-Consumer queue with multiple thread-based consumers.

@@ -7,8 +7,8 @@
     <ProjectGuid>{EDFC2766-316A-41B6-A98C-2537A0F1A0E7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ApplicationLayer</RootNamespace>
-    <AssemblyName>ApplicationLayer</AssemblyName>
+    <RootNamespace>Smi.ApplicationLayer</RootNamespace>
+    <AssemblyName>Smi.ApplicationLayer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ApplicationLayer.nuspec" />
     <None Include="NLog.config" />
     <None Include="packages.config" />
     <None Include="_CreateNewNuGetPackage\Config.ps1" />

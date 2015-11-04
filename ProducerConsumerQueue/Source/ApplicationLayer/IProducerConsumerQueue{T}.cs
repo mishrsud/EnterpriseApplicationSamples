@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace ApplicationLayer
+namespace Smi.ApplicationLayer
 {
 	#if NET40
 	/// <summary>

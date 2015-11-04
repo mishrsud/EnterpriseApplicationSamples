@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ApplicationLayer
+namespace Smi.ApplicationLayer
 {
 	public static class IEnumerableExtensions
 	{

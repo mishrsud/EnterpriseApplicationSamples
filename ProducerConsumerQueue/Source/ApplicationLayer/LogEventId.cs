@@ -1,4 +1,4 @@
-﻿namespace ApplicationLayer
+﻿namespace Smi.ApplicationLayer
 {
 	/// <summary>
 	/// The event ID values used in logging
