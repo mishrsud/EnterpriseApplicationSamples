@@ -203,12 +203,11 @@ namespace ApplicationLayer.Test
 					allTestData.AddRange(testData);
 
 					var localSut = sut;
-					Task.Run(
-						() =>
-						{
-							Thread.Sleep(200);
-							testData.ForEach(localSut.Add);
-						});
+					Task.Factory.StartNew(() =>
+					{
+						Thread.Sleep(200);
+						testData.ForEach(localSut.Add);
+					});
 				}
 
 				// Test

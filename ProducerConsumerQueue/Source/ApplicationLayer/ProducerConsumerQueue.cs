@@ -29,10 +29,19 @@ namespace ApplicationLayer
 
 		private readonly TimeSpan _maxTimeCloseDownWaitTime = TimeSpan.FromSeconds(5);
 
+		#if NET40
+		/// <summary>
+		/// Gets or sets the Consume Data Event Handler.
+		/// </summary>
+		public GenericEventHandler<T> OnConsumeData { get; set; }
+		#endif
+
+		#if NET45
 		/// <summary>
 		/// Gets or sets the Consume Data Event Handler.
 		/// </summary>
 		public EventHandler<T> OnConsumeData { get; set; }
+		#endif
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="ProducerConsumerQueue{T}"/> class.
@@ -158,10 +167,22 @@ namespace ApplicationLayer
 				_logger.Debug("Starting Producer-Consumer Queue for type '{0}'. Number of consumer threads: {1}", typeof(T), degreeOfParallelism);
 
 				// Start worker threads
+				#if NET40
+				_tasks = new Task[degreeOfParallelism];
+
+				for (int i = 0; i < degreeOfParallelism; i++)
+				{
+					_tasks[i] = Task.Factory.StartNew(
+						() => DataProcessor(_cancellationTokenSource.Token), _cancellationTokenSource.Token);
+				}
+				#endif
+
+				#if NET45
 				_tasks = Enumerable.Range(0, degreeOfParallelism).Select(
 					_ => Task.Run(
 						() => DataProcessor(_cancellationTokenSource.Token), _cancellationTokenSource.Token)
 					).ToArray();
+				#endif
 
 				_started = true;
 			}

@@ -3,16 +3,38 @@ using System.Threading;
 
 namespace ApplicationLayer
 {
+	#if NET40
+	/// <summary>
+	/// Mimicks .NET 4.5 and above version of generic event handler that does not constraint the TEventArgs type param
+	/// </summary>
+	/// <typeparam name="TEventArgs">The type of the event arguments.</typeparam>
+	/// <param name="sender">The sender.</param>
+	/// <param name="e">The <see cref="TEventArgs"/> instance containing the event data.</param>
+	public delegate void GenericEventHandler<TEventArgs>(object sender, TEventArgs e);
+	#endif
+
 	/// <summary>
 	/// A contract for a Producer-Consumer queue with multi-threaded consumers
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	public interface IProducerConsumerQueue<T> : IDisposable
 	{
+		#if NET40
+		/// <summary>
+		/// Gets or sets the on consume data.
+		/// </summary>
+		/// <remarks>
+		/// This is a workaround for the difference between definition of delegate EventHandler{TEventArgs}
+		/// </remarks>
+		GenericEventHandler<T> OnConsumeData { get; set; }
+		#endif
+
+		#if NET45
 		/// <summary>
 		/// Gets or sets the on consume data.
 		/// </summary>
 		EventHandler<T> OnConsumeData { get; set; }
+		#endif
 
 		/// <summary>
 		/// Starts Consumer threads consuming the data in queue.

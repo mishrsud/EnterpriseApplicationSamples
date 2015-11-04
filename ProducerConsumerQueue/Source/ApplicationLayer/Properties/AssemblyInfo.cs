@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ApplicationLayer")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SAXO BANK")]
+[assembly: AssemblyCompany("Sudhanshu Mishra")]
 [assembly: AssemblyProduct("ApplicationLayer")]
-[assembly: AssemblyCopyright("Copyright © SAXO BANK 2015")]
+[assembly: AssemblyCopyright("Copyright © Sudhanshu Mishra 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
