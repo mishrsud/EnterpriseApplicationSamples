@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Providers
+namespace Smi.Caching.Providers
 {
 	/// <summary>
 	/// Optimized methods for formatting values - to be used instead of built in FCL formatting methods (e.g. DateTime.ToString() when the 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Resposible for creating <see cref="ITimer"/> instances.

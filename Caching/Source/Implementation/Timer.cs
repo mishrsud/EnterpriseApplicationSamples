@@ -1,7 +1,7 @@
 ﻿using System;
-using Interfaces;
+using Smi.Caching.Interfaces;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Responsible for triggering a timed event.

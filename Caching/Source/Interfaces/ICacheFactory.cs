@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Responsible for providing <see cref="ICache{TKey,TValue}"/> instances.

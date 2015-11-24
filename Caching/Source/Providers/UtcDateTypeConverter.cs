@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Globalization;
 
-namespace Providers
+namespace Smi.Caching.Providers
 {
 	/// <summary>
 	/// Converter from string to a UtcDate

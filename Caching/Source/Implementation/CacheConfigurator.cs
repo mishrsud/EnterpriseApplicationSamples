@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using Interfaces;
-using Providers;
+using Smi.Caching.Interfaces;
+using Smi.Caching.Providers;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Configures a cache with expiration, threshold and polling interval.

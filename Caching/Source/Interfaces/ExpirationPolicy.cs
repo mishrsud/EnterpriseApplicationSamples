@@ -1,4 +1,4 @@
-﻿namespace Interfaces
+﻿namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Options for expiration policy.

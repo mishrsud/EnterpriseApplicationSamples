@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Runtime.Caching;
 using System.Threading;
-using Implementation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Providers;
+using Smi.Caching.Implementation;
+using Smi.Caching.Providers;
 using Assert = NUnit.Framework.Assert;
 
 namespace Caching.Tests

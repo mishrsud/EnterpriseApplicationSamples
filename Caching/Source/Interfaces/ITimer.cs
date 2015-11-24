@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Resposible for triggering a timed event.

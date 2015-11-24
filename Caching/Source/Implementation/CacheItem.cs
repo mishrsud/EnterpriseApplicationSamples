@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Providers;
+using Smi.Caching.Providers;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Represent an item holding a value in <see cref="Cache{TKey,TValue}"/>.

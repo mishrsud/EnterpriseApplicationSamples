@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.Caching;
-using Providers;
+using Smi.Caching.Providers;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	public interface ICacheProvider : IEnumerable<KeyValuePair<string, object>>
 	{

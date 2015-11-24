@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Configures a cache with expiration, threshold and polling interval.

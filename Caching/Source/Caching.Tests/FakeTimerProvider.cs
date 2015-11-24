@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Interfaces;
 using Rhino.Mocks;
 using Rhino.Mocks.Interfaces;
+using Smi.Caching.Interfaces;
 
 namespace Caching.Tests
 {

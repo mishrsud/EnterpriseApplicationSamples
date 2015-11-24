@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Resposible for providing a fluent API to configure timers.

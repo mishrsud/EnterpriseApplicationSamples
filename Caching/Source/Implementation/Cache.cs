@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using Interfaces;
-using Providers;
+using Smi.Caching.Interfaces;
+using Smi.Caching.Providers;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Responsible for caching items of a specific types.
@@ -29,7 +29,7 @@ namespace Implementation
 		/// <summary>
 		/// Creates a new <see cref="Cache{TKey,TValue}"/> instance.
 		/// </summary>
-		/// <param name="expiration">The expiration for items in this cache. Must be <see cref="TimeSpan.Zero"/>, meaning no expiration, or positive. If <paramref name="expirationPolicy"/> is <see cref="Caching.ExpirationPolicy.None"/> the value must be <see cref="TimeSpan.Zero"/>.</param>
+		/// <param name="expiration">The expiration for items in this cache. Must be <see cref="TimeSpan.Zero"/>, meaning no expiration, or positive. If <paramref name="expirationPolicy"/> is <see cref="Interfaces.ExpirationPolicy.None"/> the value must be <see cref="TimeSpan.Zero"/>.</param>
 		/// <param name="expirationPolicy">The expiration policy for the cache.</param>
 		/// <param name="threshold">The maximum number of items in the cache until the oldest items measured by usage is evicted to get under the threshold. Set it to <see cref="int.MaxValue"/> to not enforce a maximum size policy.</param>
 		/// <param name="pollingInterval">The interval between scavenging based on expiration and maximum number items is performed.</param>
@@ -38,7 +38,7 @@ namespace Implementation
 		/// <param name="concurrentDictionary">The concurrent dictionary used for internal storage in the this cache instance.</param>
 		/// <param name="usageQueue">The queue used for usage recordings, on which scavenging is later based.</param>
 		/// <exception cref="ArgumentNullException">Thrown if <paramref name="timerProvider"/>, <paramref name="dateTimeProvider"/>, <paramref name="concurrentDictionary"/> or <paramref name="usageQueue"/> is null.</exception>
-		/// <exception cref="ArgumentException">Thrown if <paramref name="expiration"/> is negative, if <paramref name="threshold"/> or <paramref name="pollingInterval"/> is not positive, or if <paramref name="expirationPolicy"/> is <see cref="Caching.ExpirationPolicy.None"/> but <paramref name="expiration"/> is not <see cref="TimeSpan.Zero"/>.</exception>
+		/// <exception cref="ArgumentException">Thrown if <paramref name="expiration"/> is negative, if <paramref name="threshold"/> or <paramref name="pollingInterval"/> is not positive, or if <paramref name="expirationPolicy"/> is <see cref="Interfaces.ExpirationPolicy.None"/> but <paramref name="expiration"/> is not <see cref="TimeSpan.Zero"/>.</exception>
 		internal Cache(TimeSpan expiration, ExpirationPolicy expirationPolicy, int threshold, TimeSpan pollingInterval, ITimerProvider timerProvider, IDateTimeProvider dateTimeProvider, ConcurrentDictionary<TKey, CacheItem<TKey, TValue>> concurrentDictionary, ConcurrentQueue<Hook<TKey, TValue>> usageQueue)
 		{
 			if (timerProvider == null) throw new ArgumentNullException("timerProvider");

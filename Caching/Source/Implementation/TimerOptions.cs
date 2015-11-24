@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Interfaces;
+using Smi.Caching.Interfaces;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Resposible for providing a fluent API to configure timers.

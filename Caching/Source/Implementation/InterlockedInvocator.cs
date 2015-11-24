@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Guarantees that an action is only invoked by one thread by using a <see cref="SpinLock"/> to synchronize threads.

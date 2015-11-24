@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Represents a hook to a cache item in the usage queue.

@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.Serialization;
 
-namespace Providers
+namespace Smi.Caching.Providers
 {
 	[Serializable, TypeConverter(typeof(UtcDateTimeTypeConverter))]
 	public struct UtcDateTime : IComparable, IFormattable, IConvertible, ISerializable, IComparable<UtcDateTime>, IEquatable<UtcDateTime>

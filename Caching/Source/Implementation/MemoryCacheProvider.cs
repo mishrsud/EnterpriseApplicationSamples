@@ -2,10 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Caching;
-using Interfaces;
-using Providers;
+using Smi.Caching.Interfaces;
+using Smi.Caching.Providers;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Provides a <see cref="System.Runtime.Caching.MemoryCache"/>.

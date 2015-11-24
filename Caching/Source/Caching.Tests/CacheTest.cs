@@ -2,12 +2,12 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
-using Implementation;
-using Interfaces;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
-using Providers;
 using Rhino.Mocks;
+using Smi.Caching.Implementation;
+using Smi.Caching.Interfaces;
+using Smi.Caching.Providers;
 using Assert = NUnit.Framework.Assert;
 
 namespace Caching.Tests
@@ -21,7 +21,7 @@ namespace Caching.Tests
 		private TimeSpan _pollingInterval;
 		private FakeTimerProvider _timerProvider;
 		private IDateTimeProvider _dateTimeProvider;
-		private ConcurrentDictionary<string, Implementation.CacheItem<string, object>> _concurrentDictionary;
+		private ConcurrentDictionary<string, CacheItem<string, object>> _concurrentDictionary;
 		private ConcurrentQueue<Hook<string, object>> _usageQueue;
 		private UtcDateTime _now;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Interfaces
+namespace Smi.Caching.Interfaces
 {
 	/// <summary>
 	/// Provides the options accessible on cache item expiry, ie. to revive or replace the item. If no action is taken the item is removed from the cache.

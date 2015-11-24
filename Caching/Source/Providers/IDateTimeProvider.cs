@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Providers
+namespace Smi.Caching.Providers
 {
 	public interface IDateTimeProvider
 	{

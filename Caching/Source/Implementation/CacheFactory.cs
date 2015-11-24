@@ -1,8 +1,8 @@
 ﻿using System;
-using Interfaces;
-using Providers;
+using Smi.Caching.Interfaces;
+using Smi.Caching.Providers;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Responsible for providing <see cref="ICache{TKey,TValue}"/> instances.

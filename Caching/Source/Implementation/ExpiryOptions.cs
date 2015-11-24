@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Interfaces;
+using Smi.Caching.Interfaces;
 
-namespace Implementation
+namespace Smi.Caching.Implementation
 {
 	/// <summary>
 	/// Provides the options accessible on cache item expiry, ie. to revive or replace the item. If no action is taken the item is removed from the cache.

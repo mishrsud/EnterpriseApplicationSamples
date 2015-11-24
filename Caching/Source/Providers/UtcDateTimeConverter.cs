@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Providers
+namespace Smi.Caching.Providers
 {
 	/// <summary>
 	/// Converter that can convert a string to a <see cref="UtcDateTime"/>.

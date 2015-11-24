@@ -1,5 +1,5 @@
 ﻿using System;
-using Interfaces;
+using Smi.Caching.Interfaces;
 
 namespace Caching.Tests
 {
