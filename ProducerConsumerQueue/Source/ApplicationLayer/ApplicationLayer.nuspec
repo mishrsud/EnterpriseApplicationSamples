@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Enterprise.ProducerConsumerQueue</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0</version>
     <title>ProducerConsumerQueue</title>
     <summary>Provides a Task based Producer consumer queue.</summary>
     <authors>@sudhanshutheone</authors>
@@ -12,7 +12,7 @@
     <description>Provides a Task based Producer consumer queue</description>
     <releaseNotes>Please refer to Github.</releaseNotes>
     <copyright>Copyright Sudhanshu Mishra 2015</copyright>
-    <tags>Producer consumer queue</tags>
+    <tags>Producer-consumer queue ProducerConsumerQueue</tags>
     <dependencies>
       <group targetFramework="net40">
         <dependency id="NLog" version="4.2.0" />
